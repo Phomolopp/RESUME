@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phomolo Phohu | Full Stack Developer CV</title>
+  <style>
+    :root {
+      --ink: #162033;
+      --muted: #586276;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --panel: #f6f8fb;
+      --accent: #0f766e;
+      --accent-dark: #134e4a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #e9edf3;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      box-shadow: 0 18px 50px rgba(22, 32, 51, 0.18);
+      display: grid;
+      grid-template-columns: 70mm 1fr;
+      overflow: hidden;
+    }
+
+    .page + .page {
+      margin-top: 24px;
+    }
+
+    .page-two {
+      display: block;
+      padding: 11mm;
+    }
+
+    aside {
+      background: var(--ink);
+      color: #ffffff;
+      padding: 12mm 8mm;
+    }
+
+    main {
+      padding: 12mm 11mm 10mm;
+    }
+
+    .name {
+      font-size: 31px;
+      line-height: 1;
+      letter-spacing: 0;
+      margin: 0 0 6px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 14px;
+      text-transform: uppercase;
+    }
+
+    .summary {
+      color: #dbeafe;
+      font-size: 13px;
+      margin: 0 0 18px;
+    }
+
+    .contact-list,
+    .tag-list,
+    .plain-list,
+    .project-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-list li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 7px 0;
+      word-break: break-word;
+    }
+
+    .label {
+      color: #9fd7d1;
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      color: inherit;
+      font-size: 12px;
+      letter-spacing: 0;
+      margin: 22px 0 10px;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    aside h2 {
+      border-bottom-color: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag-list li {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 11px;
+      padding: 4px 6px;
+    }
+
+    .plain-list li {
+      margin: 0 0 7px;
+    }
+
+    aside .plain-list strong {
+      color: #ffffff;
+      display: block;
+    }
+
+    aside .plain-list span {
+      color: #c8d3e4;
+    }
+
+    .section:first-child h2 {
+      margin-top: 0;
+    }
+
+    .item {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .item-head {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 14px;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .company {
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin: 2px 0 0;
+    }
+
+    .date {
+      color: var(--muted);
+      flex: 0 0 auto;
+      font-size: 11px;
+      font-weight: 700;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .bullets {
+      margin: 6px 0 0;
+      padding-left: 17px;
+    }
+
+    .bullets li {
+      margin-bottom: 4px;
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .skill-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .skill-box strong {
+      color: var(--accent-dark);
+      display: block;
+      font-size: 11px;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-list li {
+      background: var(--panel);
+      border-left: 3px solid var(--accent);
+      padding: 7px 8px;
+    }
+
+    .project-list strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .project-list span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .page-banner {
+      align-items: end;
+      border-bottom: 3px solid var(--accent);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 9px;
+    }
+
+    .page-banner h1 {
+      font-size: 24px;
+      line-height: 1;
+      margin: 0 0 4px;
+    }
+
+    .page-banner p {
+      color: var(--muted);
+      font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .page-banner .contact-mini {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .two-column {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1.25fr 0.75fr;
+    }
+
+    .reference-grid {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr;
+    }
+
+    .reference-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .reference-card strong {
+      color: var(--accent-dark);
+      display: block;
+    }
+
+    .reference-card span {
+      color: var(--muted);
+      display: block;
+      font-size: 11px;
+    }
+
+    .education-row {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr auto;
+      margin-bottom: 8px;
+    }
+
+    .education-row strong {
+      display: block;
+    }
+
+    .education-row span {
+      color: var(--muted);
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      html {
+        background: #ffffff;
+        font-size: 12.4px;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      .page {
+        box-shadow: none;
+        height: 297mm;
+        width: 210mm;
+      }
+
+      .page + .page {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <aside>
+      <h1 class="name">Phomolo Phohu</h1>
+      <p class="role">Full Stack Developer</p>
+      <p class="summary">Junior software developer with hands-on experience building full-stack web applications, SQL reporting workflows, integrations, dashboards, and production support fixes for business software.</p>
+
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><span class="label">Phone</span>065 636 3521</li>
+        <li><span class="label">Email</span><a href="mailto:phomolomanuel@gmail.com">phomolomanuel@gmail.com</a></li>
+        <li><span class="label">Location</span>Roodepoort, Gauteng</li>
+        <li><span class="label">Portfolio</span><a href="https://phomolophohuresume.netlify.app/">phomolophohuresume.netlify.app</a></li>
+        <li><span class="label">GitHub</span><a href="https://github.com/Phomolopp">github.com/Phomolopp</a></li>
+        <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/phomolo-phohu-563751246/">linkedin.com/in/phomolo-phohu</a></li>
+      </ul>
+
+      <h2>Core Skills</h2>
+      <ul class="tag-list">
+        <li>C#</li>
+        <li>.NET</li>
+        <li>.NET Core</li>
+        <li>ASP.NET</li>
+        <li>WCF</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>SQL Server</li>
+        <li>SSMS</li>
+        <li>SSRS</li>
+        <li>REST APIs</li>
+        <li>OAuth</li>
+        <li>Docker</li>
+        <li>Git</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Angular</li>
+        <li>React</li>
+        <li>Bootstrap</li>
+      </ul>
+
+      <h2>Strengths</h2>
+      <ul class="plain-list">
+        <li><strong>Back-end development</strong><span>APIs, integrations, reporting exports, authentication, data workflows.</span></li>
+        <li><strong>Front-end development</strong><span>Responsive interfaces, forms, dashboards, usability, and JavaScript behavior.</span></li>
+        <li><strong>Systems mindset</strong><span>Debugging, performance monitoring, networking fundamentals, and production support.</span></li>
+      </ul>
+
+    </aside>
+
+    <main>
+      <section class="section">
+        <h2>Professional Experience</h2>
+        <div class="item">
+          <div class="item-head">
+            <div>
+              <h3>Junior Software Developer</h3>
+              <p class="company">iST (Integrators of Systems Technology)</p>
+            </div>
+            <div class="date">Oct 2025 - Present</div>
+          </div>
+          <ul class="bullets">
+            <li>Developing a performance monitoring dashboard for iST employees to track operational software and system performance.</li>
+            <li>Building a client portal that helps users track data readings, energy consumption, and transaction activity.</li>
+            <li>Supporting ecWIN7 software by fixing reported bugs and implementing requested product features.</li>
+            <li>Working across C#, .NET, SQL Server, SSMS, SSRS, REST APIs, and front-end technologies to deliver practical business features.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <div>
+              <h3>Junior Software Developer</h3>
+              <p class="company">iST (Integrators of Systems Technology)</p>
+            </div>
+            <div class="date">Sep 2024 - Sep 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Developed drivers for meter data acquisition and integration workflows.</li>
+            <li>Created a SQLExport system used to generate reports and support data visibility.</li>
+            <li>Investigated defects, tested fixes, and supported improvements across internal and client-facing software.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <div>
+              <h3>Full-Stack Developer</h3>
+              <p class="company">CAPACITI Full Stack Development Graduate Program</p>
+            </div>
+            <div class="date">Mar 2024 - Aug 2024</div>
+          </div>
+          <ul class="bullets">
+            <li>Completed intensive full-stack training covering front-end and back-end development, APIs, SQL databases, cloud platforms, authentication, security, Git, responsive UI design, and development automation.</li>
+            <li>Built web applications and practical coding projects using JavaScript, Node.js, Express, SQL, HTML, CSS, and Bootstrap.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-box"><strong>Server-side</strong>C#, Java, .NET, .NET Core, ASP.NET, WCF, Node.js, Express, Python</div>
+          <div class="skill-box"><strong>Data and reporting</strong>SQL Server, SSMS, SSRS, SQL exports, file storage, reporting workflows</div>
+          <div class="skill-box"><strong>Web development</strong>JavaScript, TypeScript, HTML, CSS, Angular, React, Bootstrap, responsive UI</div>
+          <div class="skill-box"><strong>Tools and practices</strong>REST APIs, OAuth, Docker, Git, debugging, performance monitoring, production support</div>
+        </div>
+      </section>
+
+    </main>
+  </article>
+
+  <article class="page page-two">
+    <header class="page-banner">
+      <div>
+        <h1>Phomolo Phohu</h1>
+        <p>Projects, education, and credentials</p>
+      </div>
+      <div class="contact-mini">
+        phomolomanuel@gmail.com<br>
+        github.com/Phomolopp
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Selected Projects</h2>
+      <ul class="project-list">
+        <li><strong>Performance Monitoring Dashboard</strong><span>Employee-facing dashboard for software and system performance visibility.</span></li>
+        <li><strong>Client Portal</strong><span>Tracks meter readings, energy consumption, and transaction data for users.</span></li>
+        <li><strong>Weather App</strong><span>JavaScript API project with city search, forecast cards, weather icons, and error states.</span></li>
+        <li><strong>Soccer Player Registry</strong><span>Java Swing application with forms, player records, file persistence, and desktop UI flow.</span></li>
+        <li><strong>Snake Game</strong><span>Browser game using JavaScript movement, scoring, collision handling, and game-over states.</span></li>
+        <li><strong>Slot Machine</strong><span>Python command-line game with deposits, betting logic, random outcomes, and win calculation.</span></li>
+      </ul>
+    </section>
+
+    <div class="two-column">
+      <section class="section">
+        <h2>Education</h2>
+        <div class="education-row">
+          <div><strong>Bachelor's Degree in Computer Science</strong><span>In progress</span></div>
+          <div class="date">Feb 2026 - Nov 2028</div>
+        </div>
+        <div class="education-row">
+          <div><strong>Diploma in Information Technology</strong><span>Tshwane University of Technology | 9 distinctions | Top 5 in Advanced Object-Oriented Programming 326R (2023)</span></div>
+          <div class="date">Jan 2020 - Nov 2023</div>
+        </div>
+        <div class="education-row">
+          <div><strong>Science, Math and Engineering</strong><span>Kgagatlou Secondary School</span></div>
+          <div class="date">2015 - 2019</div>
+        </div>
+
+        <h2>Certificates and Training</h2>
+        <ul class="bullets">
+          <li>CAPACITI Full Stack Development Graduate Program certificate.</li>
+          <li>Udemy courses in C# Basics, C# Intermediate, Clean Code, Unit Testing, and SSRS.</li>
+          <li>Cisco badges completed during university and AI Academy training completed.</li>
+          <li>AI Academy training completed.</li>
+          <li>Certificates and badges are available on LinkedIn.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>References</h2>
+        <div class="reference-grid">
+          <div class="reference-card"><strong>Eon Van Zyl</strong><span>Head of Software Engineering, iST</span></div>
+          <div class="reference-card"><strong>Kefiloe Mphye</strong><span>Talent Development Coach, CAPACITI</span></div>
+          <div class="reference-card"><strong>Zamikhaya Mapundu</strong><span>Lecturer, TUT</span><span>mapunduz@tut.ac.za</span></div>
+        </div>
+      </section>
+    </div>
+  </article>
+</body>
+</html>
